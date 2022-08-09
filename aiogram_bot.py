@@ -4,9 +4,10 @@ from aiogram.dispatcher.filters.state import StatesGroup, State
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
 from pytube import YouTube
+import config 
 import os 
 
-bot = Bot(token = "your token")
+bot = Bot(config.token)
 dp = Dispatcher(bot, storage=MemoryStorage())
 storage = MemoryStorage()
 logging.basicConfig(level=logging.INFO)
